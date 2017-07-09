@@ -8,5 +8,10 @@ from get_own_post import get_own_post
 
 
 #getching own recent post information
-result = get_own_post()
-print result
+# result = get_own_post()
+# print result
+
+
+#add the get_own_post of user
+get_own_post()
+
