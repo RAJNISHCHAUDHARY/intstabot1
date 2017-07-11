@@ -1,3 +1,6 @@
+#import urllib library to download the image
+import urllib
+
 #import user_id from the user_id file to get the recent the post of the user
 from get_user_id import get_user_id
 #Here we import the requests library
@@ -18,7 +21,10 @@ def get_user_post(insta_username):
        if user_media['meta']['code'] == 200:
            # extract post ID
            if len(user_media['data']):
-               return user_media['data'][0]['id']
+               image_name = user_media['data'][0]['id'] + '.jpeg'
+               image_url = user_media['data'][0]['images']['standard_resolution']['url']
+               urllib.urlretrieve(image_url, image_name)
+               print 'Your image has been downloaded!'
            else:
                print "There is no recent post!"
        else:
