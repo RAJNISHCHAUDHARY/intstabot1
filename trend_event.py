@@ -6,11 +6,13 @@ from wordcloud import WordCloud
 from constant import APP_ACCESS_TOKEN,BASE_URL
 #import requests library
 import requests
+from get_user_id import get_user_id
 
 
 #create a function of analyse_media
-def analyse_media(media_id, target_string, trends):
+def analyse_media(target_string, trends):
     #here is code logic
+    media_id = get_user_id(insta_username)
     request_url = BASE_URL + "media/%s?access_token=%s" % (media_id, APP_ACCESS_TOKEN)
     print 'GET request url : %s' % (request_url)
     response = requests.get(request_url).json()
