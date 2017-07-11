@@ -40,12 +40,12 @@ while show_menu:        #if user enter valid key
             self_info()
             print("\n\n")
 
-        # elif menu_choice == 2:
-        #     print ("\n\t$$$$$ Downloading Your Own Recent Post.....\n")
-        #     # Control Goes to get_own_post.py
-        #     get_own_post()
-        #     print("\n")
-        # 
+        elif menu_choice == 2:
+            print ("\n\t$$$$$ Downloading Your Own Recent Post.....\n")
+            # Control Goes to get_own_post.py
+            get_own_post()
+            print("\n")
+
         # elif menu_choice == 3:
         #     insta_username = raw_input("\nEnter The Username Who's Information You Want. \n")
         #     print("\t\tWait ** Information is Downloading...\n")
