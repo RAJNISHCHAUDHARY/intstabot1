@@ -52,14 +52,14 @@ while show_menu:        #if user enter valid key
             # Control Goes to get_user_info.py
             get_user_info(insta_username)
             print("\n")
-        #
-        # elif menu_choice == 4:
-        #     insta_username = raw_input("\nEnter The Username Who's Recent Post You Want To Download. \n")
-        #     print("\t\tWait ** User's Recent Post is Downloading...")
-        #     # Control Goes to get_user_post.py
-        #     get_user_post(insta_username)
-        #     print("\n")
-        #
+
+        elif menu_choice == 4:
+            insta_username = raw_input("\nEnter The Username Who's Recent Post You Want To Download. \n")
+            print("\t\tWait ** User's Recent Post is Downloading...")
+            # Control Goes to get_user_post.py
+            get_user_post(insta_username)
+            print("\n")
+
         # elif menu_choice == 5:
         #     insta_username = raw_input("Enter The Username Who's Recent Post You Want To Like. ")
         #     print("Wait ** Liking The User's Recent Post...")
