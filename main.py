@@ -74,13 +74,13 @@ while show_menu:        #if user enter valid key
             comment_user_post1(insta_username)
             print("\n")
 
-        # elif menu_choice == 7:
-        #     insta_username = raw_input("\nEnter The Username Who's Recent Post's Comments You Want to Show \n")
-        #     print("\t\tWait ** Fetching the User's Recent Comment...")
-        #     # Control Goes to show_all_user_comment.py
-        #     show_all_comment(insta_username)
-        #     print("\n")
-        #
+        elif menu_choice == 7:
+            insta_username = raw_input("\nEnter The Username Who's Recent Post's Comments You Want to Show \n")
+            print("\t\tWait ** Fetching the User's Recent Comment...")
+            # Control Goes to show_all_user_comment.py
+            show_all_comment(insta_username)
+            print("\n")
+
         # elif menu_choice == 8:
         #     insta_username = raw_input("\nEnter The Username Who's Recent Post You Want To Delete Something. \n")
         #     print("\t\tWait ** Deleting the User's Recent Comment...")
