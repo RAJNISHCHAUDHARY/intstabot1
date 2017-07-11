@@ -81,12 +81,12 @@ while show_menu:        #if user enter valid key
             show_all_comment(insta_username)
             print("\n")
 
-        # elif menu_choice == 8:
-        #     insta_username = raw_input("\nEnter The Username Who's Recent Post You Want To Delete Something. \n")
-        #     print("\t\tWait ** Deleting the User's Recent Comment...")
-        #     # Control Goes to delete_negative_comment.py
-        #     delete_negative_comment(insta_username)
-        #     print("\n")
+        elif menu_choice == 8:
+            insta_username = raw_input("\nEnter The Username Who's Recent Post You Want To Delete Something. \n")
+            print("\t\tWait ** Deleting the User's Recent Comment...")
+            # Control Goes to delete_negative_comment.py
+            delete_negative_comment(insta_username)
+            print("\n")
 
         elif menu_choice == 9:
             print "\n\t\t<------------******Thanks To Be With Us*****------------>"
