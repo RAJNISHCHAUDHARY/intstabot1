@@ -7,8 +7,10 @@ from like_user_post import like_user_post
 from comment_user_post import comment_user_post1
 from self_info import self_info
 from show_all_user_comment import show_all_comment
-from trend_event import analyse_media
+from wordcloud import WordCloud
+
 from trend_event import find_sub_trends
+from post_a_comment import post_a_comment
 import sys
 from termcolor import colored
 
@@ -27,7 +29,7 @@ menu_choices = "What do you want to do. Select from the below Choices (1-6)" \
                "\n\t\t5. Like User's Recent Post" \
                " \n\t\t6. Comment on User's Recent Post " \
                 " \n\t\t7. Show Comments From User's Recent Post " \
-               " \n\t\t8. Show an trending events" \
+               " \n\t\t8. Make a comment on the recent post of a user" \
                "\n\t\t9. Close Application  "
 
 show_menu = True
@@ -81,12 +83,10 @@ while show_menu:        #if user enter valid key
             # Control Goes to show_all_user_comment.py
             show_all_comment(insta_username)
             print("\n")
+
         elif menu_choice == 8:
-            insta_username = raw_input("\nAnalyse the media and trending events in most post \n")
-            print("\t\tWait ** Analyse the media...")
-            # Control Goes to analyis_media.py
-            analyse_media(media_id, target_string, trends)
-            print("\n")
+            insta_username = raw_input("Enter the username of the user: ")
+            post_a_comment(insta_username)
 
 
         elif menu_choice == 9:
