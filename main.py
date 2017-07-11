@@ -67,13 +67,13 @@ while show_menu:        #if user enter valid key
             like_user_post(insta_username)
             print("\n")
 
-        # elif menu_choice == 6:
-        #     insta_username = raw_input("\nEnter The Username Who's Recent Post You Want To Write Something. \n")
-        #     print("\t\tWait ** Commenting in the User's Recent Post...")
-        #     # Control Goes to comment_user_post.py
-        #     comment_user_post1(insta_username)
-        #     print("\n")
-        #
+        elif menu_choice == 6:
+            insta_username = raw_input("\nEnter The Username Who's Recent Post You Want To Write Something. \n")
+            print("\t\tWait ** Commenting in the User's Recent Post...")
+            # Control Goes to comment_user_post.py
+            comment_user_post1(insta_username)
+            print("\n")
+
         # elif menu_choice == 7:
         #     insta_username = raw_input("\nEnter The Username Who's Recent Post's Comments You Want to Show \n")
         #     print("\t\tWait ** Fetching the User's Recent Comment...")
