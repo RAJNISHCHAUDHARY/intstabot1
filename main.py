@@ -60,13 +60,13 @@ while show_menu:        #if user enter valid key
             get_user_post(insta_username)
             print("\n")
 
-        # elif menu_choice == 5:
-        #     insta_username = raw_input("Enter The Username Who's Recent Post You Want To Like. ")
-        #     print("Wait ** Liking The User's Recent Post...")
-        #     # Control Goes to like_user_post.py
-        #     like_user_post(insta_username)
-        #     print("\n")
-        #
+        elif menu_choice == 5:
+            insta_username = raw_input("Enter The Username Who's Recent Post You Want To Like. ")
+            print("Wait ** Liking The User's Recent Post...")
+            # Control Goes to like_user_post.py
+            like_user_post(insta_username)
+            print("\n")
+
         # elif menu_choice == 6:
         #     insta_username = raw_input("\nEnter The Username Who's Recent Post You Want To Write Something. \n")
         #     print("\t\tWait ** Commenting in the User's Recent Post...")
