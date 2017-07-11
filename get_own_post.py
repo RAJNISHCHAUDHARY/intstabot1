@@ -3,7 +3,8 @@ import urllib
 #import the requests library
 import requests
 #import the base url and app access toeken form constant.py
-from constant import BASE_URL,APP_ACCESS_TOKEN
+
+from constant import APP_ACCESS_TOKEN,BASE_URL
 
 
 #getting own post of user
