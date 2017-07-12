@@ -9,6 +9,7 @@ from self_info import self_info
 
 
 from post_a_comment import post_a_comment
+from delete_a_comment import delete_a_comment
 import sys
 from termcolor import colored
 from trending import get_trending_tag_counts
@@ -28,8 +29,9 @@ menu_choices = "What do you want to do. Select from the below Choices (1-6)" \
                "\n\t\t5. Like User's Recent Post" \
                " \n\t\t6. Comment on User's Recent Post " \
                " \n\t\t7. Make a comment on the recent post of a user" \
-               " \n\t\t8. Show the trending events" \
-               "\n\t\t9. Close Application  "
+               " \n\t\t8. Delete a comment on user post" \
+               " \n\t\t9. Show the trending events" \
+               "\n\t\t10. Close Application  "
 
 show_menu = True
 while show_menu:        #if user enter valid key
@@ -76,26 +78,24 @@ while show_menu:        #if user enter valid key
             comment_user_post1(insta_username)
             print("\n")
 
-        # elif menu_choice == 7:
-        #     insta_username = raw_input("\nEnter The Username Who's Recent Post's Comments You Want to Show \n")
-        #     print("\t\tWait ** Fetching the User's Recent Comment...")
-        #     # Control Goes to show_all_user_comment.py
-        #     show_all_comment(insta_username)
-        #     print("\n")
 
         elif menu_choice == 7:
             insta_username = raw_input("Enter the username of the user: ")
             post_a_comment(insta_username)
 
         elif menu_choice == 8:
+            insta_username = raw_input("Enter the username of the user: ")
+            delete_a_comment(insta_username)
+
+        elif menu_choice == 9:
             tag = raw_input("Enter Tagname.........\n")
-            print("Wait counting Ur Tags......")
+            print("Wait counting Ur Tags......\n")
             get_trending_tag_counts(tag)
-            print("Style.RESET_ALL")
+            print("Style.RESET_ALL\n")
             print("\n")
             print("\n")
 
-        elif menu_choice == 9:
+        elif menu_choice == 10:
             print "\n\t\t<------------******Thanks To Be With Us*****------------>"
             exit()
 
