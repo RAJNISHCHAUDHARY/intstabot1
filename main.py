@@ -6,13 +6,12 @@ from get_user_info import get_user_info
 from like_user_post import like_user_post
 from comment_user_post import comment_user_post1
 from self_info import self_info
-from show_all_user_comment import show_all_comment
-from wordcloud import WordCloud
 
-from trend_event import find_sub_trends
+
 from post_a_comment import post_a_comment
 import sys
 from termcolor import colored
+from trending import get_trending_tag_counts
 
 
 #   <-------------------------InstaBot Application Starts From Here------------------------>
@@ -28,8 +27,8 @@ menu_choices = "What do you want to do. Select from the below Choices (1-6)" \
                "\n\t\t4. Download User's Recent Post " \
                "\n\t\t5. Like User's Recent Post" \
                " \n\t\t6. Comment on User's Recent Post " \
-                " \n\t\t7. Show Comments From User's Recent Post " \
-               " \n\t\t8. Make a comment on the recent post of a user" \
+               " \n\t\t7. Make a comment on the recent post of a user" \
+               " \n\t\t8. Show the trending events" \
                "\n\t\t9. Close Application  "
 
 show_menu = True
@@ -77,17 +76,24 @@ while show_menu:        #if user enter valid key
             comment_user_post1(insta_username)
             print("\n")
 
-        elif menu_choice == 7:
-            insta_username = raw_input("\nEnter The Username Who's Recent Post's Comments You Want to Show \n")
-            print("\t\tWait ** Fetching the User's Recent Comment...")
-            # Control Goes to show_all_user_comment.py
-            show_all_comment(insta_username)
-            print("\n")
+        # elif menu_choice == 7:
+        #     insta_username = raw_input("\nEnter The Username Who's Recent Post's Comments You Want to Show \n")
+        #     print("\t\tWait ** Fetching the User's Recent Comment...")
+        #     # Control Goes to show_all_user_comment.py
+        #     show_all_comment(insta_username)
+        #     print("\n")
 
-        elif menu_choice == 8:
+        elif menu_choice == 7:
             insta_username = raw_input("Enter the username of the user: ")
             post_a_comment(insta_username)
 
+        elif menu_choice == 8:
+            tag = raw_input("Enter Tagname.........\n")
+            print("Wait counting Ur Tags......")
+            get_trending_tag_counts(tag)
+            print("Style.RESET_ALL")
+            print("\n")
+            print("\n")
 
         elif menu_choice == 9:
             print "\n\t\t<------------******Thanks To Be With Us*****------------>"
