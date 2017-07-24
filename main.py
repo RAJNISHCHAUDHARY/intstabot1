@@ -4,7 +4,6 @@ from get_user_post import get_user_post
 from get_own_post import get_own_post
 from get_user_info import get_user_info
 from like_user_post import like_user_post
-from comment_user_post import comment_user_post1
 from self_info import self_info
 
 
